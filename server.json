@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/who-gho",
   "title": "Who Gho",
   "description": "WHO GHO MCP — World Health Organization Global Health Observatory (free, no auth)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/who-gho",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-who-gho",
