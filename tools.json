@@ -1,0 +1,47 @@
+[
+  {
+    "name": "get_indicators",
+    "description": "Search or list WHO Global Health Observatory indicators. Returns indicator codes and names. Use the indicator code with get_data to retrieve actual values. Example: get_indicators(\"life expectancy\") or get_indicators(\"malaria\")",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Optional search keyword to filter indicators (e.g., \"mortality\", \"tuberculosis\"). Omit to list all."
+        }
+      }
+    }
+  },
+  {
+    "name": "get_data",
+    "description": "Get World Health Organization health statistics for a country and year — life expectancy, immunization coverage, mortality, disease burden, risk factors and health system measures from the Global Health Observatory. Accepts a plain indicator name such as \"measles immunization coverage\" and a plain country name such as \"Kenya\"; both are resolved to WHO codes and the response says what it resolved to. If the requested year has no data it returns the latest year that does, and says which.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "indicator": {
+          "type": "string",
+          "description": "Indicator NAME (\"measles immunization coverage\", \"life expectancy at birth\") or a GHO code (\"mslv\", \"WHOSIS_000001\"). Names are resolved — do not invent a code."
+        },
+        "country": {
+          "type": "string",
+          "description": "Country NAME (\"Kenya\", \"United States\") or ISO3 code (\"KEN\", \"USA\")."
+        },
+        "year": {
+          "type": "string",
+          "description": "Year, e.g. \"2020\". If that year has no data the latest available year is returned instead, flagged as year_fallback."
+        }
+      },
+      "required": [
+        "indicator"
+      ]
+    }
+  },
+  {
+    "name": "list_countries",
+    "description": "Return all WHO-recognized countries with their 3-letter ISO code, display name, and parent region code. Use the ISO codes returned here as the country parameter in get_data (e.g., \"USA\", \"GBR\", \"JPN\").",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  }
+]

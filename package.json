@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-who-gho",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "WHO GHO MCP — World Health Organization Global Health Observatory (free, no auth)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-who-gho": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "who-gho"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-who-gho.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/who-gho",
   "pipeworx": {
-    "sourceHash": "v1-903fe43ad95f6b8d39eb0927aad9f4edc5be60ec3a4efd2284a1a03b344dff6e",
-    "sourceCommit": "2cb50b368da3267446f2b6f6a3ddbd3d0eed3d73"
+    "mode": "gateway",
+    "slug": "who-gho",
+    "gatewaySlug": "who-gho",
+    "sourceHash": "v1-1243dd28512cfbdb938c598c425eafd5dfc7e1d0ebb0b1969170ab3405125767",
+    "sourceCommit": "98853f34516646cb7c4c1460f09249b262c0269e"
   }
 }
