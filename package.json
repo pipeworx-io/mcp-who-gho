@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-who-gho",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "WHO GHO MCP — World Health Organization Global Health Observatory (free, no auth)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "who-gho",
     "gatewaySlug": "who-gho",
-    "sourceHash": "v1-1243dd28512cfbdb938c598c425eafd5dfc7e1d0ebb0b1969170ab3405125767",
-    "sourceCommit": "98853f34516646cb7c4c1460f09249b262c0269e"
+    "sourceHash": "v1-2bd4096552819d9d6eefa830a80fb3aa821c4fa51090de9b49aa77d0d5ab8f79",
+    "sourceCommit": "78b905fa3a6880dfb85c79150f4bffe8cf50ef00"
   }
 }
